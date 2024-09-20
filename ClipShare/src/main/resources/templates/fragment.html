@@ -1,18 +1,28 @@
 <div th:fragment="myheader" style="background-color: cadetblue; text-align: center; display: grid;">
-    <div>
+    <div class="header">
         <header>
-            <h1>bdthèque
-            </h1>
-            <h2>HE2B-ESI / WEBG6 / 2021-2022</h2>
-
+            <h2>ClipShare</h2>
         </header>
     </div>
-    <div class="div">
-        <nav>
-            <a th:href="@{/}">Accueil</a>
-            <a th:href="@{/collection}">Collection</a>
+    <div class="link_div">
+        <div>
+            <nav class="nav">
+                <a th:href="@{/}">Home</a>
+                <a th:href="@{/collection}">Trending</a>
+                <a th:href="@{/collection}">Categories</a>
+                <a th:href="@{/collection}">Upload</a>
+                <a th:href="@{/collection}">Contact</a>
+                <a th:href="@{/collection}">Reels</a>
 
-        </nav>
+            </nav>
+        </div>
+        <div>
+            <nav class="nav" style="float: right" >
+                <a th:href="@{/}">Login</a>
+                <a th:href="@{/collection}">Logout</a>
+            </nav>
+        </div>
+
     </div>
 
 </div>
