@@ -112,6 +112,10 @@ h1 {
     border-radius: 5px;
 }
 
+#upload__button {
+    margin-top: 25px;
+}
+
 /*.input__upload {
     width: 30%;
 }*/
