@@ -82,7 +82,7 @@ h1 {
 
 }
 
-.main__upload {
+.main__body {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Vertically center */
@@ -96,6 +96,7 @@ h1 {
     padding-top: 20px;
     padding-bottom: 20px;
     margin: 20px auto;
+    border-radius: 5px;
 
 }
 
@@ -114,6 +115,15 @@ h1 {
 
 #upload__button {
     margin-top: 25px;
+}
+
+.upload__form__contact {
+    width: 80%;
+}
+
+.upload__form__contact div {
+    padding-top: 5px;
+    padding-bottom: 10px;
 }
 
 /*.input__upload {

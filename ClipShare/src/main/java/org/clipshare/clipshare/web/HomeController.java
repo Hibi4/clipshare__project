@@ -18,4 +18,9 @@ public class HomeController  {
     public String upload() {
         return "upload";
     }
+
+    @GetMapping("/contact")
+    public String contact() {
+        return "contact";
+    }
 }
