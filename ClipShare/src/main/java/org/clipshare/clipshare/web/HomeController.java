@@ -23,4 +23,14 @@ public class HomeController  {
     public String contact() {
         return "contact";
     }
+
+    @GetMapping("/reels")
+    public String reels() {
+        return "reels";
+    }
+
+    @GetMapping("/trending")
+    public String trending() {
+        return "trending";
+    }
 }
