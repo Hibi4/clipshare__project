@@ -33,4 +33,9 @@ public class HomeController  {
     public String trending() {
         return "trending";
     }
+
+    @GetMapping("/categories")
+    public String categories() {
+        return "categories";
+    }
 }

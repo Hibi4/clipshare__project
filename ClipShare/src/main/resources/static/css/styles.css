@@ -126,6 +126,22 @@ h1 {
     padding-bottom: 10px;
 }
 
-/*.input__upload {
-    width: 30%;
-}*/
+/* category css file */
+.category__folders {
+    display: grid;
+    grid-template-columns: 30% 30% 30% 30%;
+    width: 80%;
+    /* height: 160px;
+    width: 160px; */
+    /* gap: 10px; */
+   /* background-color: yellow; */
+}
+
+ .category__folders div {
+    height: 260px;
+    width: 260px;
+
+    border-radius: 5px;
+    background-color: yellow;
+
+}
