@@ -1,6 +1,6 @@
 console.log("console from javascript")
-const main = document.querySelector(".main");
-
+// const main = document.querySelector(".main");
+/*
 for (let i = 0; i < 2; i++) {
   //  for (let j = 0; j < 3; j++) {
         // create elements
@@ -55,4 +55,71 @@ for (let i = 0; i < 2; i++) {
         main.appendChild(main__element);
    // }
 
-}
+}*/
+
+const videos = [
+        {
+                src: '../image/education__logo.jpg',
+                alt: 'Cat Fails',
+                title: 'Hilarious Cat Fails',
+                views: '1.2M views',
+                time: '2 days ago'
+        },
+        {
+                src: '/api/placeholder/280/157',
+                alt: 'Easy Recipes',
+                title: 'Easy 5-Minute Recipes',
+                views: '500K views',
+                time: '1 week ago'
+        },
+        {
+                src: '/api/placeholder/280/157',
+                alt: 'Hidden Beaches',
+                title: 'Exploring Hidden Beaches',
+                views: '750K views',
+                time: '3 days ago'
+        },
+        {
+                src: '/api/placeholder/280/157',
+                alt: 'Smartphone Review',
+                title: 'Latest Smartphone Review',
+                views: '2M views',
+                time: '5 days ago'
+        }
+];
+
+const container = document.getElementById('videoContainer');
+
+// Dynamically create thumbnails
+videos.forEach(video => {
+        const thumbnailDiv = document.createElement('div');
+        thumbnailDiv.classList.add('thumbnail');
+
+        const img = document.createElement('img');
+        img.src = video.src;
+        img.alt = video.alt;
+        thumbnailDiv.appendChild(img);
+
+        const infoDiv = document.createElement('div');
+        infoDiv.classList.add('thumbnail-info');
+
+        const titleDiv = document.createElement('div');
+        titleDiv.classList.add('thumbnail-title');
+        titleDiv.textContent = video.title;
+        infoDiv.appendChild(titleDiv);
+
+        const metaDiv = document.createElement('div');
+        metaDiv.classList.add('thumbnail-meta');
+
+        const viewsSpan = document.createElement('span');
+        viewsSpan.textContent = video.views;
+        metaDiv.appendChild(viewsSpan);
+
+        const timeSpan = document.createElement('span');
+        timeSpan.textContent = video.time;
+        metaDiv.appendChild(timeSpan);
+
+        infoDiv.appendChild(metaDiv);
+        thumbnailDiv.appendChild(infoDiv);
+        container.appendChild(thumbnailDiv);
+});
