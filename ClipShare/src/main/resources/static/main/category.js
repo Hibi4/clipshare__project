@@ -1,7 +1,7 @@
 // categories videos
 
 // const main = document.getElementById(".category__folders");
-const main = document.querySelector(".category__folders");
+/* const main = document.querySelector(".category__folders");
 
 for (let i = 0; i < 1; i++) {
 
@@ -45,18 +45,18 @@ for (let i = 0; i < 1; i++) {
 
 
 
-    /* main__div__first.appendChild(sports__div);
+    /main__div__first.appendChild(sports__div);
     main__div__first.appendChild(entertainment__div);
     main__div__first.appendChild(technology__div);
     main__div__first.appendChild(music__div);
-    main__div__first.appendChild(lifestyle__div); */
+    main__div__first.appendChild(lifestyle__div);
 
     // main div second
-    /* main__div__second.appendChild(sports__div);
+    main__div__second.appendChild(sports__div);
     main__div__second.appendChild(entertainment__div);
     main__div__second.appendChild(technology__div);
     main__div__second.appendChild(music__div);
-    main__div__second.appendChild(lifestyle__div); */
+    main__div__second.appendChild(lifestyle__div);
 
 
     main.appendChild(entertainment__div);
@@ -64,4 +64,110 @@ for (let i = 0; i < 1; i++) {
     main.appendChild(technology__div);
     main.appendChild(music__div);
     // main.appendChild(main__div__second);
-}
+} */
+
+const categories = [
+    {
+        src: '../image/education__logo.jpg',
+        alt: 'Cat Fails',
+        title: 'Comedy',
+        views: '1.2M views',
+        time: '2 days ago',
+        description: 'Laugh out loud with hilarious clip'
+    },
+    {
+        src: '../image/education__logo.jpg',
+        alt: 'Easy Recipes',
+        title: 'Education',
+        views: '500K views',
+        time: '1 week ago',
+        description: 'Learn something new every day'
+    },
+    {
+        src: '../image/music__logo.jpg',
+        alt: 'Hidden Beaches',
+        title: 'Music',
+        views: '750K views',
+        time: '3 days ago',
+        description: 'Discover new tunes and live performance'
+    },
+    {
+        src: '/api/placeholder/280/157',
+        alt: 'Smartphone Review',
+        title: 'Gaming',
+        views: '2M views',
+        time: '5 days ago',
+        description: 'Watch gameplay and gaming reviews'
+    },
+    {
+        src: '../image/technology__logo.jpg',
+        alt: 'Smartphone Review',
+        title: 'Technology',
+        views: '2M views',
+        time: '5 days ago',
+        description: 'Stay updated with tech news and reviews'
+    },
+    {
+        src: '../image/sports__logo.jpg',
+        alt: 'Smartphone Review',
+        title: 'Sports',
+        views: '2M views',
+        time: '5 days ago',
+        description: 'Catch up on the latest sports highlights'
+    },
+    {
+        src: '../image/lifestyle__logo.jpg',
+        alt: 'Smartphone Review',
+        title: 'Lifestyle',
+        views: '2M views',
+        time: '5 days ago',
+        description: 'Life is all sense'
+    },
+    {
+        src: '../image/lifestyle__logo.jpg',
+        alt: 'Smartphone Review',
+        title: 'Cooking',
+        views: '2M views',
+        time: '5 days ago',
+        description: 'Discover delicious recipes and cooking tips'
+    }
+];
+
+const container = document.getElementById('videoContainer');
+
+// Dynamically create thumbnails
+categories.forEach(video => {
+    const thumbnailDiv = document.createElement('div');
+    thumbnailDiv.classList.add('thumbnail');
+
+    const img = document.createElement('img');
+    img.src = video.src;
+    img.alt = video.alt;
+    thumbnailDiv.appendChild(img);
+
+    const infoDiv = document.createElement('div');
+    infoDiv.classList.add('thumbnail-info');
+
+    const titleDiv = document.createElement('div');
+    titleDiv.classList.add('thumbnail-title');
+    titleDiv.textContent = video.title;
+    infoDiv.appendChild(titleDiv);
+
+    const metaDiv = document.createElement('div');
+    metaDiv.classList.add('thumbnail-meta');
+
+    const descSpan = document.createElement('span');
+    descSpan.textContent = video.description;
+    metaDiv.appendChild(descSpan);
+    /* const viewsSpan = document.createElement('span');
+    viewsSpan.textContent = video.views;
+    metaDiv.appendChild(viewsSpan);
+
+    const timeSpan = document.createElement('span');
+    timeSpan.textContent = video.time;
+    metaDiv.appendChild(timeSpan); */
+
+    infoDiv.appendChild(metaDiv);
+    thumbnailDiv.appendChild(infoDiv);
+    container.appendChild(thumbnailDiv);
+});

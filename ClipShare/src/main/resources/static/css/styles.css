@@ -153,6 +153,7 @@ h1 {
 .thumbnail-title {
     font-weight: bold;
     margin-bottom: 4px;
+    text-align: center;
 }
 .thumbnail-meta {
     display: flex;
