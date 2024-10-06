@@ -56,7 +56,7 @@ for (let i = 0; i < 2; i++) {
    // }
 
 }*/
-
+/*
 const videos = [
         {
                 src: '../image/education__logo.jpg',
@@ -86,13 +86,16 @@ const videos = [
                 views: '2M views',
                 time: '5 days ago'
         }
-];
+]; */
 
 const container = document.getElementById('videoContainer');
 
+
 // Dynamically create thumbnails
 videos.forEach(video => {
-        const thumbnailDiv = document.createElement('div');
+        console.log("video game");
+        console.log(video);
+        /* const thumbnailDiv = document.createElement('div');
         thumbnailDiv.classList.add('thumbnail');
 
         const img = document.createElement('img');
@@ -105,14 +108,14 @@ videos.forEach(video => {
 
         const titleDiv = document.createElement('div');
         titleDiv.classList.add('thumbnail-title');
-        titleDiv.textContent = video.title;
+        titleDiv.textContent = video.name;
         infoDiv.appendChild(titleDiv);
 
         const metaDiv = document.createElement('div');
         metaDiv.classList.add('thumbnail-meta');
 
         const viewsSpan = document.createElement('span');
-        viewsSpan.textContent = video.views;
+        viewsSpan.textContent = video.name;
         metaDiv.appendChild(viewsSpan);
 
         const timeSpan = document.createElement('span');
@@ -121,5 +124,5 @@ videos.forEach(video => {
 
         infoDiv.appendChild(metaDiv);
         thumbnailDiv.appendChild(infoDiv);
-        container.appendChild(thumbnailDiv);
+        container.appendChild(thumbnailDiv); */
 });

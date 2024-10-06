@@ -12,12 +12,14 @@
 
     <main class="main__body">
         <h2 class="upload__tittle__text" style="color: blue; text-align: center">Upload Your Video</h2>
-        <form class="upload__form">
+        <!-- form th:action="@{/urlCtrl}" th:object="${user}" method="post">
+ -->
+        <form th:action="@{/saveVideo}" class="upload__form" enctype="multipart/form-data" method="post">
             <div>
                 <h2>Video Title</h2>
             </div>
             <div class="input-group-sm mb-3 input__upload">
-                <input type="text" class="form-control" placeholder="Video title" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <input type="text" id="name" name="name" class="form-control" placeholder="Video title" aria-label="Recipient's username" aria-describedby="button-addon2">
             </div>
             <div>
                 <h2> Description</h2>
@@ -47,15 +49,18 @@
             <!-- upload file -->
             <div class="custom-file file__upload">
                 <p>Drag and drop your video file here, or click to select a file</p>
-                <input type="file" class="custom-file-input " id="customFile">
+                <input type="file" name="file" class="custom-file-input " id="file">
                 <!-- <button type="button" class="btn btn-primary">Primary</button> -->
                 <!-- <button class="custom-file-label" for="customFile">Upload file</button> -->
 
             </div>
+            <div id="upload__button">
+                <button type="submit" class="btn btn-primary">Upload video</button>
+            </div>
         </form>
-        <div id="upload__button">
-            <button type="button" class="btn btn-primary">Upload video</button>
-        </div>
+
+        <!-- call addVideo method -->
+
     </main>
 
     <!-- footer fragment -->
