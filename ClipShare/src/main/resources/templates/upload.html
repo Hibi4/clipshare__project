@@ -14,20 +14,20 @@
         <h2 class="upload__tittle__text" style="color: blue; text-align: center">Upload Your Video</h2>
         <!-- form th:action="@{/urlCtrl}" th:object="${user}" method="post">
  -->
-        <form th:action="@{/saveVideo}" class="upload__form" enctype="multipart/form-data" method="post">
+        <form th:action="@{/saveVideo}" th:object="${video}" class="upload__form" enctype="multipart/form-data" method="post">
             <div>
                 <h2>Video Title</h2>
             </div>
             <div class="input-group-sm mb-3 input__upload">
-                <input type="text" id="name" name="name" class="form-control" placeholder="Video title" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <input type="text"  id="name" name="name" class="form-control" placeholder="Video title" aria-label="Recipient's username" aria-describedby="button-addon2">
             </div>
-            <div>
+            <!-- <div>
                 <h2> Description</h2>
             </div>
 
-            <div class="input-group-sm mb-3 ">
+            <div class="input-group-sm mb-3 "> -->
                 <!-- <input type="text" class="form-control description__input" placeholder="Video description" aria-label="Recipient's username" aria-describedby="button-addon2"> -->
-                <textarea class="form-control description__input" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <!--        <textarea class="form-control description__input" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
             <div>
                 <h2>Catégories</h2>
@@ -45,7 +45,7 @@
             </div>
             <div class="input-group-sm mb-3 input__upload">
                 <input type="text" class="form-control" placeholder="Video tag" aria-label="Recipient's username" aria-describedby="button-addon2">
-            </div>
+            </div> -->
             <!-- upload file -->
             <div class="custom-file file__upload">
                 <p>Drag and drop your video file here, or click to select a file</p>

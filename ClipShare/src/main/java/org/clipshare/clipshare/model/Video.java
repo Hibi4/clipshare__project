@@ -1,6 +1,8 @@
 package org.clipshare.clipshare.model;
 
 
+import org.springframework.web.multipart.MultipartFile;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
@@ -15,13 +17,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Video {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotBlank
+    @NotBlank(message = "Name is required")
     private String name;
 
     @Lob
-    private String file;
+    private byte[] file;
 
 }
