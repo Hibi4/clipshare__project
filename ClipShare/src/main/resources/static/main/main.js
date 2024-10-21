@@ -56,8 +56,8 @@ for (let i = 0; i < 2; i++) {
    // }
 
 }*/
-/*
-const videos = [
+
+/* const videos = [
         {
                 src: '../image/education__logo.jpg',
                 alt: 'Cat Fails',
@@ -92,9 +92,33 @@ const container = document.getElementById('videoContainer');
 
 
 // Dynamically create thumbnails
+console.log(videos);
 videos.forEach(video => {
         console.log("video game");
         console.log(video);
+        // root div
+        const thumbnailDiv = document.createElement('div');
+        thumbnailDiv.classList.add('thumbnail');
+
+        const infoDiv = document.createElement('div');
+        infoDiv.classList.add('thumbnail-info');
+
+        /* create textpane for the name */
+        const textDiv = document.createElement('div');
+        textDiv.classList.add('thumbnail-title');
+        textDiv.textContent = video.name;
+        // textDiv.appendChild(textDiv);
+        infoDiv.appendChild(textDiv);
+
+        /* const metaDiv = document.createElement('div');
+        metaDiv.classList.add('thumbnail-meta'); */
+
+        thumbnailDiv.appendChild(infoDiv)
+        container.appendChild(thumbnailDiv);
+
+
+        /* const img = document.createElement('img');
+        img.src = video.file; */
         /* const thumbnailDiv = document.createElement('div');
         thumbnailDiv.classList.add('thumbnail');
 
