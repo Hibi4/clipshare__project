@@ -56,6 +56,7 @@ public class HomeController  {
             try {
                 byte[] data = file.getBytes();
                 video.setName(video.getName());
+                video.setDescription(video.getDescription());
                 video.setFile(data);
                 videoService.saveVideo(video);
             } catch (Exception e) {

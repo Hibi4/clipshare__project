@@ -23,6 +23,9 @@ public class Video {
     @NotBlank(message = "Name is required")
     private String name;
 
+    @NotBlank(message = "Description is required")
+    private String description;
+
     @Lob
     private byte[] file;
 

@@ -155,6 +155,11 @@ h1 {
     margin-bottom: 4px;
     text-align: center;
 }
+
+.thumbnail-desc {
+    text-align: center;
+}
+
 .thumbnail-meta {
     display: flex;
     justify-content: space-between;

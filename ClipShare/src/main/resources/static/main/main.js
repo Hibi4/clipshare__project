@@ -100,6 +100,42 @@ videos.forEach(video => {
         const thumbnailDiv = document.createElement('div');
         thumbnailDiv.classList.add('thumbnail');
 
+        /* create div for video item */
+        // const videoDiv = document.createElement('div');
+        // const videoItem = document.createElement('video');
+        // videoItem.src = video.src;
+        /*
+          function createVideoElement(sources) {
+          // Create the video element
+          const video = document.createElement('video');
+          video.controls = true;
+
+          // Add each source to the video element
+          sources.forEach(source => {
+            const sourceElement = document.createElement('source');
+            sourceElement.src = source.src;
+            sourceElement.type = source.type;
+            video.appendChild(sourceElement);
+          });
+
+          // Add a fallback message
+          const fallbackMessage = document.createElement('p');
+          fallbackMessage.innerHTML = 'Votre navigateur ne supporte pas la vidéo HTML5. Voici à la place <a href="rabbit320.mp4">un lien vers la vidéo</a>.';
+          video.appendChild(fallbackMessage);
+
+          return video;
+          }
+
+        // Example usage
+        const videoSources = [
+          { src: 'rabbit320.mp4', type: 'video/mp4' },
+          { src: 'rabbit320.webm', type: 'video/webm' }
+        ];
+
+        document.body.appendChild(createVideoElement(videoSources));
+                 */
+
+
         const infoDiv = document.createElement('div');
         infoDiv.classList.add('thumbnail-info');
 
@@ -110,10 +146,21 @@ videos.forEach(video => {
         // textDiv.appendChild(textDiv);
         infoDiv.appendChild(textDiv);
 
+        // description div
+        const textDescDiv = document.createElement('div');
+        textDescDiv.classList.add('thumbnail-desc');
+        const textDescSpan = document.createElement('span');
+        textDescSpan.classList.add('thumbnail-desc');
+        textDescSpan.textContent = video.description;
+        textDescDiv.appendChild(textDescSpan);
+
+
         /* const metaDiv = document.createElement('div');
         metaDiv.classList.add('thumbnail-meta'); */
 
-        thumbnailDiv.appendChild(infoDiv)
+        thumbnailDiv.appendChild(infoDiv);
+        // should add here video div to the root div
+        thumbnailDiv.appendChild(textDescDiv);
         container.appendChild(thumbnailDiv);
 
 
