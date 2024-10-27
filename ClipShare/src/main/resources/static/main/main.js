@@ -146,6 +146,29 @@ videos.forEach(video => {
         // textDiv.appendChild(textDiv);
         infoDiv.appendChild(textDiv);
 
+        // create div for the image link
+        const textDivImg = document.createElement('div');
+        const linkDiv = document.createElement('a');
+        const img = document.createElement('img');
+        img.classList.add('thumbnail-img');
+        linkDiv.href = `/videos/${video.id}`
+        img.src = "../image/education__logo.jpg"
+        img.alt = "image description";
+        linkDiv.appendChild(img);
+        textDivImg.appendChild(linkDiv);
+
+        /*
+        const img = document.createElement('img');
+        img.src = video.file;
+        /* const thumbnailDiv = document.createElement('div');
+        thumbnailDiv.classList.add('thumbnail');
+
+        const img = document.createElement('img');
+        img.src = video.src;
+        img.alt = video.alt;
+        thumbnailDiv.appendChild(img);
+         */
+
         // description div
         const textDescDiv = document.createElement('div');
         textDescDiv.classList.add('thumbnail-desc');
@@ -160,6 +183,7 @@ videos.forEach(video => {
 
         thumbnailDiv.appendChild(infoDiv);
         // should add here video div to the root div
+        thumbnailDiv.appendChild(textDivImg);
         thumbnailDiv.appendChild(textDescDiv);
         container.appendChild(thumbnailDiv);
 
